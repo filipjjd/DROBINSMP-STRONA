@@ -157,8 +157,8 @@ main{display:block;}
 @keyframes gem-float{0%,100%{transform:rotate(45deg) translateY(0);}50%{transform:rotate(45deg) translateY(-6px);}}
 .crafting-caption{font-family:var(--font-pixel);font-size:10px;color:var(--stone-dim);letter-spacing:2px;text-align:center;margin:22px 0 50px;}
 
-.founders-row{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
-.founder-card{background:var(--panel);border:1px solid var(--border);padding:30px 20px;width:206px;text-align:center;transition:border-color .25s,transform .25s;}
+.founders-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:900px;margin:0 auto;}
+.founder-card{background:var(--panel);border:1px solid var(--border);padding:30px 20px;text-align:center;transition:border-color .25s,transform .25s;}
 .founder-card:hover{border-color:var(--gold-deep);transform:translateY(-4px);}
 .founder-avatar{width:78px;height:78px;margin:0 auto 16px;border:2px solid var(--border);overflow:hidden;}
 .founder-avatar img{width:100%;height:100%;object-fit:cover;display:block;}
@@ -168,10 +168,13 @@ main{display:block;}
 .founder-links a{font-size:11px;font-family:var(--font-display);font-weight:600;padding:6px 11px;background:var(--panel-2);border:1px solid var(--border);color:var(--stone);transition:all .2s;}
 .founder-links a:hover{border-color:var(--gold);color:var(--gold);}
 
+@media (max-width:760px){.founders-row{grid-template-columns:repeat(2,minmax(0,1fr));max-width:640px;}}
+
 @media (max-width:560px){
   .crafting{flex-direction:column;}
   .crafting-arrow{transform:rotate(90deg);}
   .crafting-grid{grid-template-columns:repeat(3,62px);grid-template-rows:repeat(3,62px);}
+  .founders-row{grid-template-columns:1fr;max-width:320px;}
 }
 
 /* ---------- regulamin ---------- */
