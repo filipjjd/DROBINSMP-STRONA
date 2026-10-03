@@ -68,6 +68,49 @@ if (particleHost) {
   }
 }
 
+// Teaser images open in a keyboard-accessible native dialog.
+const teaserViewer = document.getElementById('teaserViewer');
+const teaserPhotos = Array.from(document.querySelectorAll('.teaser-photo'));
+if (teaserViewer && typeof teaserViewer.showModal === 'function') {
+  const fullImage = teaserViewer.querySelector('.teaser-full-image');
+  const counter = teaserViewer.querySelector('.teaser-counter');
+  let activePhoto = 0;
+  function showPhoto(index) {
+    activePhoto = (index + teaserPhotos.length) % teaserPhotos.length;
+    const photo = teaserPhotos[activePhoto];
+    fullImage.src = photo.href;
+    fullImage.alt = photo.querySelector('img').alt;
+    counter.textContent = `${activePhoto + 1} / ${teaserPhotos.length}`;
+  }
+  teaserPhotos.forEach((photo, index) => {
+    photo.addEventListener('click', event => {
+      event.preventDefault();
+      showPhoto(index);
+      teaserViewer.showModal();
+      document.body.classList.add('teaser-open');
+    });
+  });
+  teaserViewer.querySelector('.teaser-close').addEventListener('click', () => teaserViewer.close());
+  teaserViewer.querySelector('.teaser-prev').addEventListener('click', () => showPhoto(activePhoto - 1));
+  teaserViewer.querySelector('.teaser-next').addEventListener('click', () => showPhoto(activePhoto + 1));
+  teaserViewer.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      showPhoto(activePhoto + (event.key === 'ArrowRight' ? 1 : -1));
+    }
+  });
+  teaserViewer.addEventListener('click', event => {
+    const bounds = teaserViewer.getBoundingClientRect();
+    if (event.target === teaserViewer && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) {
+      teaserViewer.close();
+    }
+  });
+  teaserViewer.addEventListener('close', () => {
+    document.body.classList.remove('teaser-open');
+    teaserPhotos[activePhoto].focus();
+  });
+}
+
 // scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
 if (revealEls.length) {
