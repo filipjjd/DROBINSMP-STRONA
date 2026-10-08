@@ -274,6 +274,7 @@ body.teaser-open{overflow:hidden;}
 .shop-benefits strong{color:var(--parchment);}
 .shop-benefits code{color:var(--gold);overflow-wrap:anywhere;font-size:14px;}
 .shop-benefits-note{margin-top:20px;color:var(--stone);font-size:14px;}
+.creator-benefits-heading{font:700 22px var(--font-display);margin:28px 0 18px;}
 .shop-option{display:flex;gap:16px;align-items:center;padding:20px 0;border-top:1px solid var(--border);}
 .shop-option>div{flex:1;}
 .shop-option strong,.shop-option code{display:block;}
