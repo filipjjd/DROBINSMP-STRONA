@@ -303,8 +303,17 @@ body.teaser-open{overflow:hidden;}
 .shop-creator li{padding-left:6px;margin-bottom:14px;color:var(--stone);}
 .shop-creator strong{color:var(--parchment);}
 .shop-creator-apply{padding-top:24px;border-top:1px solid var(--border);}
+.shop-terms-link{color:var(--gold);text-decoration:underline;text-underline-offset:3px;}
+.shop-consent{grid-column:1/-1;display:flex;align-items:flex-start;gap:14px;font-size:14px;}
+.shop-consent input{width:22px;height:22px;flex-shrink:0;margin-top:2px;accent-color:var(--gold);}
+.tipply-amount{margin-top:48px;aspect-ratio:1100/950;}
+.tipply-amount .tipply-notes p+p{margin-top:14px;}
+.purchase-rules{max-width:900px;margin:auto;}
+.purchase-rules h3{font:700 22px var(--font-display);margin:32px 0 12px;}
+.purchase-rules p+p{margin-top:16px;}
 @media(max-width:900px){
   .tipply-diagram{aspect-ratio:auto;max-width:650px;margin:auto;}
+  .tipply-amount{margin-top:40px;}
   .tipply-diagram>img{width:100%;}
   .tipply-arrows{display:none;}
   .tipply-mobile-arrows{display:block;position:absolute;top:0;left:0;width:100%;pointer-events:none;}

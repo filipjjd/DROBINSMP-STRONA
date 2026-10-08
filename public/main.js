@@ -115,6 +115,19 @@ if (teaserViewer && typeof teaserViewer.showModal === 'function') {
 const shopProducts = document.querySelectorAll('[data-product]');
 const shopMessage = document.getElementById('shopMessage');
 if (shopMessage) {
+  const termsAccept = document.getElementById('shopTermsAccept');
+  const termsStatus = document.getElementById('shopTermsStatus');
+  if (termsAccept) {
+    document.getElementById('shopTipply').addEventListener('click', event => {
+      if (!termsAccept.checked) {
+        event.preventDefault();
+        termsStatus.textContent = 'Przeczytaj zasady zakupów i zaznacz ich akceptację przed przejściem do Tipply.';
+        termsAccept.focus();
+        termsAccept.reportValidity();
+      }
+    });
+    termsAccept.addEventListener('change', () => { termsStatus.textContent = ''; });
+  }
   shopProducts.forEach(button => button.addEventListener('click', () => {
     shopProducts.forEach(option => option.setAttribute('aria-pressed', option === button));
     document.getElementById('shopSelection').textContent = button.dataset.label;

@@ -53,8 +53,11 @@
       <div class="shop-checkout" id="platnosc">
         <div aria-live="polite"><span class="shop-label">WYBRANA OPCJA</span><h3 id="shopSelection">VIP · 7 dni</h3><p>Kwota do wpisania w Tipply: <strong id="shopAmount">5 zł</strong></p></div>
         <div class="shop-message"><span class="shop-label">WIADOMOŚĆ DO WKLEJENIA</span><code id="shopMessage">KOD PRODUKTU: VIP-7D</code><button type="button" id="shopCopy">Kopiuj wiadomość</button></div>
-        <a href="https://tipply.pl/@drobinsmp" target="_blank" rel="noopener noreferrer" class="btn btn-primary cut-sm">Przejdź do Tipply ↗</a>
+        <label class="shop-consent"><input type="checkbox" id="shopTermsAccept" required><span>Zapoznałem się z <a class="shop-terms-link" href="regulamin.html#zakupy">zasadami zakupów</a> i akceptuję je. Akceptacja nie oznacza rezygnacji z ustawowych praw konsumenta.</span></label>
+        <a href="https://tipply.pl/@drobinsmp" target="_blank" rel="noopener noreferrer" class="btn btn-primary cut-sm" id="shopTipply">Przejdź do Tipply ↗</a>
+        <p class="shop-payment-note" id="shopTermsStatus" aria-live="polite"></p>
         <p class="shop-payment-note">Płatność wykonujesz na profilu <strong>@drobinsmp</strong> w Tipply, podając swój nick z Minecrafta, kod produktu i kwotę wybranej opcji. <strong>Administracja przegląda zamówienia w Tipply i nadaje rangi ręcznie po sprawdzeniu płatności.</strong></p>
+        <p class="shop-payment-note">Przed opłaceniem zamówienia przeczytaj <a class="shop-terms-link" href="regulamin.html#zakupy">zasady zakupów, reklamacji i zwrotów</a>. Samo przejście do Tipply nie stanowi rezygnacji z ustawowych praw konsumenta.</p>
       </div>
     </div>
   </section>
@@ -64,7 +67,7 @@
       <div class="section-head center"><span class="eyebrow">JAK KUPIĆ</span><h2 class="section-heading" id="shopGuideTitle">Tak wypełnij formularz Tipply</h2><p class="section-sub">Wzór poniżej pokazuje, gdzie wpisać dane. Użyj kodu swojej rangi, a w polu kwoty wpisz jej cenę.</p></div>
       <div class="tipply-diagram">
         <img src="images/tipply-wzor.png" width="740" height="908" alt="Wzór formularza Tipply z polami: Twój nickname, Twój adres e-mail i treść wiadomości do streamera">
-        <svg class="tipply-arrows" viewBox="0 0 1100 908" aria-hidden="true"><defs><marker id="shopArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#f4c10f"/></marker></defs><path d="M810 290 L745 290 L575 350 M810 460 L575 473 M810 640 L575 650" fill="none" stroke="#f4c10f" stroke-width="3" marker-end="url(#shopArrow)"/></svg>
+        <svg class="tipply-arrows" viewBox="0 0 1100 908" aria-hidden="true"><defs><marker id="shopArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#f4c10f"/></marker></defs><g fill="none" stroke="#f4c10f" stroke-width="3" marker-end="url(#shopArrow)"><path d="M810 290 L745 290 L575 350"/><path d="M810 460 L575 473"/><path d="M810 640 L575 650"/></g></svg>
         <svg class="tipply-mobile-arrows" viewBox="0 0 740 908" aria-hidden="true"><defs><marker id="shopMobileArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#f4c10f"/></marker></defs><g fill="none" stroke="#f4c10f" stroke-width="3" marker-end="url(#shopMobileArrow)"><path d="M680 350 L575 350"/><path d="M680 473 L575 473"/><path d="M680 650 L575 650"/></g><g fill="#f4c10f"><circle cx="685" cy="350" r="23"/><circle cx="685" cy="473" r="23"/><circle cx="685" cy="650" r="23"/></g><g text-anchor="middle" fill="#0a0806" font-size="24" font-family="sans-serif" font-weight="700"><text x="685" y="358">1</text><text x="685" y="481">2</text><text x="685" y="658">3</text></g></svg>
         <ol class="tipply-notes">
           <li><span>1</span><div><h3>Twój nick z Minecrafta</h3><p>Wpisz dokładny nick, na który ma zostać nadana ranga. Sprawdź pisownię przed płatnością.</p></div></li>
@@ -72,7 +75,13 @@
           <li><span>3</span><div><h3>Kod produktu w wiadomości</h3><p>Wklej przygotowaną wiadomość, np. <code>KOD PRODUKTU: VIP-7D</code>. Kod wskazuje rangę i czas jej trwania.</p></div></li>
         </ol>
       </div>
-      <p class="shop-guide-end">Następnie wpisz cenę wybranej opcji w polu kwoty, wybierz metodę płatności i dokończ ją w Tipply. Zachowaj potwierdzenie płatności i poczekaj na ręczne wykonanie zamówienia przez administrację.</p>
+      <div class="tipply-diagram tipply-amount">
+        <img src="images/tipply-kwota.png" width="704" height="904" alt="Druga część formularza Tipply: pole Wpisz kwotę z wartością 0 PLN i wybór metody płatności" loading="lazy">
+        <svg class="tipply-arrows" viewBox="0 0 1100 950" aria-hidden="true"><defs><marker id="amountArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#f4c10f"/></marker></defs><path d="M810 290 L565 295" fill="none" stroke="#f4c10f" stroke-width="3" marker-end="url(#amountArrow)"/></svg>
+        <svg class="tipply-mobile-arrows" viewBox="0 0 704 904" aria-hidden="true"><defs><marker id="amountMobileArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#f4c10f"/></marker></defs><path d="M650 281 L545 281" fill="none" stroke="#f4c10f" stroke-width="3" marker-end="url(#amountMobileArrow)"/><circle cx="655" cy="281" r="23" fill="#f4c10f"/><text x="655" y="289" text-anchor="middle" fill="#0a0806" font-size="24" font-family="sans-serif" font-weight="700">4</text></svg>
+        <ol class="tipply-notes" start="4"><li><span>4</span><div><h3>Wpisz kwotę wybranego zestawu</h3><p>Kliknij pole <strong>0 PLN</strong> i wpisz dokładnie cenę wybranej rangi. Przykład: <strong>SVIP na 30 dni = 30 zł</strong>. Kwota musi odpowiadać kodowi produktu z wiadomości.</p><p>Podpowiedzi kwot w Tipply nie są cenami naszych zestawów. Wpisz właściwą kwotę ręcznie.</p></div></li></ol>
+      </div>
+      <p class="shop-guide-end">Sprawdź nick, kod i kwotę. Następnie wybierz metodę płatności i dokończ ją w Tipply. Zachowaj potwierdzenie płatności i poczekaj na ręczne wykonanie zamówienia przez administrację.</p>
     </div>
   </section>
 
@@ -95,8 +104,9 @@
       <a href="ekipa.html">Ekipa</a>
       <a href="dolacz.html">Dołącz</a>
       <a href="sklep.html">Sklep</a>
+      <a href="regulamin.html#zakupy">Zasady zakupów i zwrotów</a>
     </div>
-    <p class="footer-copy">© 2026 Drobin SMP — stworzone przez Fifka, PanBidona, Adanimosa, Finarkosa, Sisia i Anbeuu.</p>
+    <p class="footer-copy">© 2026 SRAKETUSYY — grupa zarządzająca Drobin SMP.</p>
   </div>
 </footer>
 
