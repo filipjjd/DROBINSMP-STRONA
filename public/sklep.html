@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sklep — Drobin SMP już wkrótce</title>
-<meta name="description" content="Sklep Drobin SMP już wkrótce. Wróć po otwarciu serwera, aby zobaczyć ofertę.">
+<title>Sklep — VIP i SVIP | Drobin SMP</title>
+<meta name="description" content="Wybierz rangę VIP lub SVIP w Drobin SMP. Ceny, kody produktów, instrukcja płatności przez Tipply i wymagania rangi TWÓRCA.">
 <meta name="theme-color" content="#0a0806">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230a0806'/%3E%3Crect x='28' y='28' width='44' height='44' fill='%23f4c10f' transform='rotate(45 50 50)'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,18 +30,59 @@
 <main>
   <header class="page-header">
     <span class="eyebrow center">SKLEP</span>
-    <h1>Sklep już wkrótce</h1>
-    <p>Pracujemy nad sklepem Drobin SMP. Wróć tutaj po jego otwarciu.</p>
+    <h1>Wybierz swoją rangę</h1>
+    <p>VIP lub SVIP — na 7 dni, 30 dni albo na zawsze. Płatność przez Tipply.</p>
   </header>
 
-  <section class="section coming-soon">
-    <div class="container center">
-      <div class="info-card cut-sm reveal">
-        <span class="tag">W PRZYGOTOWANIU</span>
-        <h2>Jeszcze chwila cierpliwości</h2>
-        <p>Sklep pojawi się tutaj wkrótce. Na razie możesz poznać serwer i przygotować się na jego start.</p>
-        <a href="index.html" class="btn btn-primary cut-sm coming-soon-link">Wróć na stronę główną</a>
+  <section class="shop-section" aria-label="Oferta rang">
+    <div class="container">
+      <div class="shop-ranks">
+        <article class="shop-rank">
+          <span class="eyebrow">RANGA</span><h2>VIP</h2>
+          <div class="shop-option"><div><strong>7 dni</strong><code>VIP-7D</code></div><span class="shop-price">5 zł</span><button type="button" data-product="VIP-7D" data-price="5" data-label="VIP · 7 dni" aria-pressed="true">Wybierz</button></div>
+          <div class="shop-option"><div><strong>30 dni</strong><code>VIP-30D</code></div><span class="shop-price">15 zł</span><button type="button" data-product="VIP-30D" data-price="15" data-label="VIP · 30 dni" aria-pressed="false">Wybierz</button></div>
+          <div class="shop-option"><div><strong>Na zawsze</strong><code>VIP-PERM</code></div><span class="shop-price">25 zł</span><button type="button" data-product="VIP-PERM" data-price="25" data-label="VIP · na zawsze" aria-pressed="false">Wybierz</button></div>
+        </article>
+        <article class="shop-rank shop-rank-svip">
+          <span class="eyebrow">RANGA</span><h2>SVIP</h2>
+          <div class="shop-option"><div><strong>7 dni</strong><code>SVIP-7D</code></div><span class="shop-price">15 zł</span><button type="button" data-product="SVIP-7D" data-price="15" data-label="SVIP · 7 dni" aria-pressed="false">Wybierz</button></div>
+          <div class="shop-option"><div><strong>30 dni</strong><code>SVIP-30D</code></div><span class="shop-price">30 zł</span><button type="button" data-product="SVIP-30D" data-price="30" data-label="SVIP · 30 dni" aria-pressed="false">Wybierz</button></div>
+          <div class="shop-option"><div><strong>Na zawsze</strong><code>SVIP-PERM</code></div><span class="shop-price">50 zł</span><button type="button" data-product="SVIP-PERM" data-price="50" data-label="SVIP · na zawsze" aria-pressed="false">Wybierz</button></div>
+        </article>
       </div>
+      <div class="shop-checkout" id="platnosc">
+        <div aria-live="polite"><span class="shop-label">WYBRANA OPCJA</span><h3 id="shopSelection">VIP · 7 dni</h3><p>Kwota do wpisania w Tipply: <strong id="shopAmount">5 zł</strong></p></div>
+        <div class="shop-message"><span class="shop-label">WIADOMOŚĆ DO WKLEJENIA</span><code id="shopMessage">KOD PRODUKTU: VIP-7D</code><button type="button" id="shopCopy">Kopiuj wiadomość</button></div>
+        <a href="https://tipply.pl/@drobinsmp" target="_blank" rel="noopener noreferrer" class="btn btn-primary cut-sm">Przejdź do Tipply ↗</a>
+        <p class="shop-payment-note">Płatność wykonujesz na profilu <strong>@drobinsmp</strong> w Tipply, podając swój nick z Minecrafta, kod produktu i kwotę wybranej opcji. <strong>Administracja przegląda zamówienia w Tipply i nadaje rangi ręcznie po sprawdzeniu płatności.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="shop-section shop-guide" aria-labelledby="shopGuideTitle">
+    <div class="container">
+      <div class="section-head center"><span class="eyebrow">JAK KUPIĆ</span><h2 class="section-heading" id="shopGuideTitle">Tak wypełnij formularz Tipply</h2><p class="section-sub">Wzór poniżej pokazuje, gdzie wpisać dane. Użyj kodu swojej rangi, a w polu kwoty wpisz jej cenę.</p></div>
+      <div class="tipply-diagram">
+        <img src="images/tipply-wzor.png" width="740" height="908" alt="Wzór formularza Tipply z polami: Twój nickname, Twój adres e-mail i treść wiadomości do streamera">
+        <svg class="tipply-arrows" viewBox="0 0 1100 908" aria-hidden="true"><defs><marker id="shopArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#f4c10f"/></marker></defs><path d="M810 290 L745 290 L575 350 M810 460 L575 473 M810 640 L575 650" fill="none" stroke="#f4c10f" stroke-width="3" marker-end="url(#shopArrow)"/></svg>
+        <svg class="tipply-mobile-arrows" viewBox="0 0 740 908" aria-hidden="true"><defs><marker id="shopMobileArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#f4c10f"/></marker></defs><g fill="none" stroke="#f4c10f" stroke-width="3" marker-end="url(#shopMobileArrow)"><path d="M680 350 L575 350"/><path d="M680 473 L575 473"/><path d="M680 650 L575 650"/></g><g fill="#f4c10f"><circle cx="685" cy="350" r="23"/><circle cx="685" cy="473" r="23"/><circle cx="685" cy="650" r="23"/></g><g text-anchor="middle" fill="#0a0806" font-size="24" font-family="sans-serif" font-weight="700"><text x="685" y="358">1</text><text x="685" y="481">2</text><text x="685" y="658">3</text></g></svg>
+        <ol class="tipply-notes">
+          <li><span>1</span><div><h3>Twój nick z Minecrafta</h3><p>Wpisz dokładny nick, na który ma zostać nadana ranga. Sprawdź pisownię przed płatnością.</p></div></li>
+          <li><span>2</span><div><h3>Twój adres e-mail</h3><p>Podaj swój poprawny adres e-mail, jak w formularzu Tipply.</p></div></li>
+          <li><span>3</span><div><h3>Kod produktu w wiadomości</h3><p>Wklej przygotowaną wiadomość, np. <code>KOD PRODUKTU: VIP-7D</code>. Kod wskazuje rangę i czas jej trwania.</p></div></li>
+        </ol>
+      </div>
+      <p class="shop-guide-end">Następnie wpisz cenę wybranej opcji w polu kwoty, wybierz metodę płatności i dokończ ją w Tipply. Zachowaj potwierdzenie płatności i poczekaj na ręczne wykonanie zamówienia przez administrację.</p>
+    </div>
+  </section>
+
+  <section class="shop-section" aria-labelledby="creatorTitle">
+    <div class="container">
+      <article class="shop-creator">
+        <span class="eyebrow">DLA TWÓRCÓW</span><h2 class="section-heading" id="creatorTitle">Ranga TWÓRCA</h2><p>Zdobywasz ją przez tworzenie materiałów o Drobin SMP.</p>
+        <ol><li>Masz minimum <strong>1000 subskrybentów na YouTube lub obserwujących na innej platformie</strong>.</li><li>Publikujesz <strong>film promujący Drobin SMP</strong> na swoim kanale.</li><li>Jesteś aktywny: <strong>streamujesz z serwera lub nagrywasz odcinki</strong>.</li></ol>
+        <p class="shop-creator-apply">Przygotuj link do swojego kanału i filmu promocyjnego, a następnie zgłoś się do administracji Drobin SMP w sprawie rangi TWÓRCA.</p>
+      </article>
     </div>
   </section>
 </main>

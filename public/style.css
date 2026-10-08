@@ -262,6 +262,64 @@ body.teaser-open{overflow:hidden;}
 .coming-soon .info-card h2{font-family:var(--font-display);font-size:clamp(24px,4vw,34px);line-height:1.2;margin-bottom:16px;}
 .coming-soon-link{margin-top:28px;}
 
+/* ---------- shop ---------- */
+.shop-section{padding:30px 0 60px;}
+.shop-ranks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;}
+.shop-rank{padding:32px;background:var(--panel);border:1px solid var(--gold-deep);}
+.shop-rank h2{font:700 44px var(--font-display);color:var(--gold);margin-bottom:24px;}
+.shop-rank-svip{border-color:var(--redstone-deep);}
+.shop-rank-svip h2{color:var(--redstone);}
+.shop-option{display:flex;gap:16px;align-items:center;padding:20px 0;border-top:1px solid var(--border);}
+.shop-option>div{flex:1;}
+.shop-option strong,.shop-option code{display:block;}
+.shop-option code{color:var(--stone);font-size:14px;margin-top:4px;}
+.shop-price{font:700 24px var(--font-display);white-space:nowrap;}
+.shop-option button,.shop-message button{padding:10px 14px;border:1px solid var(--gold-deep);font-size:14px;min-height:44px;}
+.shop-option button:hover,.shop-option button[aria-pressed="true"]{background:var(--gold);color:var(--void);}
+.shop-checkout{margin-top:24px;padding:30px;background:var(--panel-2);border:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;}
+.shop-label{display:block;font-size:14px;color:var(--gold);font-weight:600;letter-spacing:.04em;margin-bottom:8px;}
+.shop-checkout h3{font:700 24px var(--font-display);margin-bottom:8px;}
+.shop-message code{display:block;overflow-wrap:anywhere;margin-bottom:12px;font-size:16px;}
+.shop-message button{color:var(--gold);}
+.shop-payment-note{grid-column:1/-1;color:var(--stone);font-size:14px;}
+.shop-checkout .btn{justify-content:center;width:fit-content;}
+.shop-guide{padding-top:60px;}
+.tipply-diagram{position:relative;width:100%;aspect-ratio:1100/908;}
+.tipply-diagram>img{width:67.2727%;height:auto;}
+.tipply-arrows{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+.tipply-mobile-arrows{display:none;}
+.tipply-notes{list-style:none;}
+.tipply-notes li{position:absolute;left:74%;right:0;display:flex;gap:10px;}
+.tipply-notes li:nth-child(1){top:27%;}
+.tipply-notes li:nth-child(2){top:46%;}
+.tipply-notes li:nth-child(3){top:65%;}
+.tipply-notes li>span{flex-shrink:0;width:28px;height:28px;display:grid;place-items:center;background:var(--gold);color:var(--void);font-weight:700;}
+.tipply-notes h3{font:700 18px var(--font-display);margin-bottom:8px;}
+.tipply-notes p{font-size:14px;color:var(--stone);}
+.tipply-notes code{color:var(--gold);overflow-wrap:anywhere;}
+.shop-guide-end{max-width:740px;margin:24px auto 0;font-size:16px;color:var(--stone);text-align:center;}
+.shop-creator{padding:40px;background:linear-gradient(135deg,var(--panel-2),var(--panel));border:1px solid var(--gold-deep);}
+.shop-creator ol{list-style:decimal;padding-left:24px;margin:24px 0;}
+.shop-creator li{padding-left:6px;margin-bottom:14px;color:var(--stone);}
+.shop-creator strong{color:var(--parchment);}
+.shop-creator-apply{padding-top:24px;border-top:1px solid var(--border);}
+@media(max-width:900px){
+  .tipply-diagram{aspect-ratio:auto;max-width:650px;margin:auto;}
+  .tipply-diagram>img{width:100%;}
+  .tipply-arrows{display:none;}
+  .tipply-mobile-arrows{display:block;position:absolute;top:0;left:0;width:100%;pointer-events:none;}
+  .tipply-notes{display:grid;gap:24px;margin-top:28px;}
+  .tipply-notes li{position:static;}
+  .tipply-notes p{font-size:16px;}
+}
+@media(max-width:700px){
+  .shop-ranks,.shop-checkout{grid-template-columns:1fr;}
+  .shop-rank,.shop-checkout,.shop-creator{padding:24px;}
+  .shop-option{gap:10px;flex-wrap:wrap;}
+  .shop-price{font-size:22px;}
+  .shop-checkout .btn{width:100%;}
+}
+
 /* ---------- footer ---------- */
 .footer{padding:60px 24px 40px;}
 .footer-inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;border-top:1px solid var(--border);padding-top:38px;}

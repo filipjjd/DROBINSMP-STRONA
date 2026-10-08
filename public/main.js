@@ -111,6 +111,34 @@ if (teaserViewer && typeof teaserViewer.showModal === 'function') {
   });
 }
 
+// Prepare a product message for the external Tipply form.
+const shopProducts = document.querySelectorAll('[data-product]');
+const shopMessage = document.getElementById('shopMessage');
+if (shopMessage) {
+  shopProducts.forEach(button => button.addEventListener('click', () => {
+    shopProducts.forEach(option => option.setAttribute('aria-pressed', option === button));
+    document.getElementById('shopSelection').textContent = button.dataset.label;
+    document.getElementById('shopAmount').textContent = `${button.dataset.price} zł`;
+    shopMessage.textContent = `KOD PRODUKTU: ${button.dataset.product}`;
+  }));
+  const copyButton = document.getElementById('shopCopy');
+  copyButton.addEventListener('click', async () => {
+    const original = 'Kopiuj wiadomość';
+    try {
+      await navigator.clipboard.writeText(shopMessage.textContent);
+      copyButton.textContent = 'Skopiowano!';
+    } catch (error) {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(shopMessage);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      copyButton.textContent = 'Zaznaczono — skopiuj ręcznie';
+    }
+    setTimeout(() => { copyButton.textContent = original; }, 2500);
+  });
+}
+
 // scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
 if (revealEls.length) {
