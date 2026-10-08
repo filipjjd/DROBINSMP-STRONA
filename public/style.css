@@ -269,6 +269,11 @@ body.teaser-open{overflow:hidden;}
 .shop-rank h2{font:700 44px var(--font-display);color:var(--gold);margin-bottom:24px;}
 .shop-rank-svip{border-color:var(--redstone-deep);}
 .shop-rank-svip h2{color:var(--redstone);}
+.shop-benefits{list-style:disc;padding-left:20px;margin:0 0 26px;color:var(--stone);font-size:15px;}
+.shop-benefits li{margin-bottom:12px;}
+.shop-benefits strong{color:var(--parchment);}
+.shop-benefits code{color:var(--gold);overflow-wrap:anywhere;font-size:14px;}
+.shop-benefits-note{margin-top:20px;color:var(--stone);font-size:14px;}
 .shop-option{display:flex;gap:16px;align-items:center;padding:20px 0;border-top:1px solid var(--border);}
 .shop-option>div{flex:1;}
 .shop-option strong,.shop-option code{display:block;}
