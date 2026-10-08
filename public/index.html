@@ -45,14 +45,17 @@
   </div>
 </header>
 
-<section class="trailer-section">
+<section class="trailer-section" id="trailer" aria-labelledby="spawnTrailerTitle">
   <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">NOWY TRAILER</span>
+      <h2 class="section-heading" id="spawnTrailerTitle">Poznaj spawn Drobin SMP</h2>
+    </div>
     <div class="reveal">
-      <video class="trailer-video cut" controls preload="metadata" poster="images/trailer-poster.jpg">
-        <source src="videos/trailer.mp4" type="video/mp4">
+      <video class="trailer-video cut" controls playsinline preload="metadata" poster="images/spawn-trailer-poster.jpg" aria-label="Drobin SMP — trailer spawnu">
+        <source src="videos/spawn-trailer.mp4" type="video/mp4">
         Twoja przeglądarka nie obsługuje odtwarzania wideo.
       </video>
-      <p class="trailer-credit">Song "Dimension" by Creo • Creo - Dimension licensed under Creative Commons</p>
     </div>
   </div>
 </section>
@@ -90,6 +93,22 @@
     <button type="button" class="teaser-next" aria-label="Następne zdjęcie">→</button>
   </div>
 </dialog>
+
+<section class="trailer-section trailer-archive" id="poprzedni-trailer" aria-labelledby="previousTrailerTitle">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">WCZEŚNIEJSZA ZAPOWIEDŹ</span>
+      <h2 class="section-heading" id="previousTrailerTitle">Pierwszy trailer Drobin SMP</h2>
+    </div>
+    <div class="reveal">
+      <video class="trailer-video cut" controls playsinline preload="none" poster="images/trailer-poster.jpg" aria-label="Drobin SMP — pierwszy trailer">
+        <source src="videos/trailer.mp4" type="video/mp4">
+        Twoja przeglądarka nie obsługuje odtwarzania wideo.
+      </video>
+      <p class="trailer-credit">Song "Dimension" by Creo • Creo - Dimension licensed under Creative Commons</p>
+    </div>
+  </div>
+</section>
 
 <section class="section explore">
   <div class="container">

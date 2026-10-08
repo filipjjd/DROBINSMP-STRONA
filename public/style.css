@@ -205,6 +205,7 @@ main{display:block;}
 .trailer-section{padding:56px 24px 110px;text-align:center;}
 .trailer-video{width:100%;max-width:900px;margin:0 auto;display:block;background:#000;border:1px solid var(--border);}
 .trailer-credit{margin-top:14px;font-size:10px;color:var(--stone-dim);opacity:.55;letter-spacing:.02em;}
+.trailer-archive{padding-top:70px;padding-bottom:30px;}
 
 /* ---------- teaser gallery ---------- */
 .teaser-section{padding:0 24px 40px;}
