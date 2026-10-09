@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Drobin SMP — już wkrótce</title>
-<meta name="description" content="Drobin SMP już wkrótce. Polski serwer Minecraft Java Edition od wersji 1.21.11 wzwyż, z klasycznym survivalem i uczciwą grą.">
+<title>Drobin SMP — premiera 10.10.2026 o 18:00</title>
+<meta name="description" content="Premiera Drobin SMP w sobotę 10 października 2026 o 18:00 czasu polskiego. Dołącz do transmisji twórców i spotkaj gościa specjalnego. Minecraft Java 1.21.11+.">
 <meta name="theme-color" content="#0a0806">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230a0806'/%3E%3Crect x='28' y='28' width='44' height='44' fill='%23f4c10f' transform='rotate(45 50 50)'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,10 +30,19 @@
 <header class="hero">
   <div class="particles" id="particles"></div>
   <img class="hero-logo" src="images/logo.png" alt="Drobin SMP" width="1400" height="612">
-  <p class="hero-tagline">Drobin SMP już wkrótce!</p>
+  <p class="hero-tagline">Premiera Drobin SMP</p>
+  <p class="launch-date"><time datetime="2026-10-10T18:00:00+02:00">Sobota, 10.10.2026 · 18:00</time><span>Czas polski · Europe/Warsaw</span></p>
   <p class="hero-sub">Survival taki, jaki powinien być — Ty, Twoje umiejętności i uczciwa gra.</p>
+  <div class="launch-countdown" id="launchCountdown" role="timer" aria-label="Czas do premiery Drobin SMP" aria-live="off">
+    <div><strong data-countdown="days">--</strong><span>dni</span></div>
+    <div><strong data-countdown="hours">--</strong><span>godzin</span></div>
+    <div><strong data-countdown="minutes">--</strong><span>minut</span></div>
+    <div><strong data-countdown="seconds">--</strong><span>sekund</span></div>
+  </div>
+  <p class="launch-finished" id="launchFinished" role="status" hidden>Nadszedł czas premiery! Wbijaj na transmisje twórców i dołącz do wspólnego startu.</p>
+  <p class="launch-invite">Wbijaj na live’y różnych twórców i przeżyj premierę razem z nami. <strong>Będzie też gość specjalny!</strong></p>
   <div class="hero-meta">
-    <div class="status-pill"><span class="status-dot"></span>Start wkrótce</div>
+    <div class="status-pill"><span class="status-dot"></span>Premiera 10.10 · 18:00</div>
     <div class="status-pill">Minecraft Java 1.21.11+</div>
     <div class="ip-pill">
       <span>mc.drobinsmp.pl</span>
@@ -41,7 +50,8 @@
     </div>
   </div>
   <div class="hero-ctas">
-    <a href="dolacz.html" class="btn btn-primary cut-sm">Jak dołączyć po starcie</a>
+    <a href="dolacz.html" class="btn btn-primary cut-sm">Jak dołączyć</a>
+    <a href="ekipa.html" class="btn btn-secondary cut-sm">Poznaj twórców</a>
   </div>
 </header>
 
@@ -133,7 +143,7 @@
       <a href="dolacz.html" class="explore-card cut-sm reveal">
         <span class="explore-tag">DOŁĄCZ</span>
         <h3>Przygotuj się na start</h3>
-        <p>Serwer ruszy wkrótce. Sprawdź adres i informacje o dołączeniu.</p>
+        <p>Premiera w sobotę 10.10.2026 o 18:00 czasu polskiego. Sprawdź, jak dołączyć.</p>
         <span class="explore-link">Jak dołączyć →</span>
       </a>
       <a href="sklep.html" class="explore-card cut-sm reveal">

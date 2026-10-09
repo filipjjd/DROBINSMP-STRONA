@@ -152,6 +152,32 @@ if (shopMessage) {
   });
 }
 
+// Warsaw is UTC+02:00 on the announced premiere date.
+const launchCountdown = document.getElementById('launchCountdown');
+if (launchCountdown) {
+  const launchTime = Date.parse('2026-10-10T18:00:00+02:00');
+  let launchInterval;
+  function updateLaunchCountdown() {
+    const remaining = Math.max(0, Math.ceil((launchTime - Date.now()) / 1000));
+    const values = {
+      days: Math.floor(remaining / 86400),
+      hours: Math.floor(remaining / 3600) % 24,
+      minutes: Math.floor(remaining / 60) % 60,
+      seconds: remaining % 60
+    };
+    Object.entries(values).forEach(([unit, value]) => {
+      launchCountdown.querySelector(`[data-countdown="${unit}"]`).textContent = String(value).padStart(2, '0');
+    });
+    if (remaining === 0) {
+      launchCountdown.hidden = true;
+      document.getElementById('launchFinished').hidden = false;
+      if (launchInterval) clearInterval(launchInterval);
+    }
+  }
+  updateLaunchCountdown();
+  if (!launchCountdown.hidden) launchInterval = setInterval(updateLaunchCountdown, 1000);
+}
+
 // scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
 if (revealEls.length) {
