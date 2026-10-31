@@ -335,6 +335,22 @@ body.teaser-open{overflow:hidden;}
   .shop-checkout .btn{width:100%;}
 }
 
+.crate-section{padding-top:64px;}
+.crate-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start;}
+.crate-card{padding:24px;min-width:0;}
+.crate-card h3{font:700 26px var(--font-display);color:var(--gold);margin-bottom:12px;}
+.crate-chance{font-size:16px;margin-bottom:20px;}
+.crate-card .shop-option{flex-wrap:wrap;}
+.crate-card .shop-option>div{flex-basis:100%;}
+.crate-catalog{margin-top:20px;border-top:1px solid var(--border);}
+.crate-catalog summary{cursor:pointer;padding:18px 0;color:var(--gold);font-weight:600;min-height:44px;}
+.crate-catalog table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:14px;}
+.crate-catalog caption{text-align:left;color:var(--stone);padding:0 0 16px;}
+.crate-catalog th,.crate-catalog td{text-align:left;vertical-align:top;padding:12px 6px;border-top:1px solid var(--border);overflow-wrap:anywhere;}
+.crate-catalog td:nth-child(2){color:var(--stone);}
+.crate-catalog summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+@media(max-width:1000px){.crate-grid{grid-template-columns:1fr;}.crate-card .shop-option>div{flex-basis:auto;}}
+
 /* ---------- footer ---------- */
 .footer{padding:60px 24px 40px;}
 .footer-inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;border-top:1px solid var(--border);padding-top:38px;}
